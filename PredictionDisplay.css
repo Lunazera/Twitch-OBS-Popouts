@@ -43,12 +43,12 @@
 	font-family: var(--font);
 }
 
-div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(1) > h4 {
-	font-size: var(--header-size); 
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(1) > div:nth-child(2) > h4 {
+	font-size: var(--header-size) !important; 
 }
 
-div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(1) > p {
-	font-size: var(--subheader-size); 
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(1) > div:nth-child(2) > p {
+	font-size: var(--subheader-size) !important; 
 }
 
 div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
