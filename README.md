@@ -1,9 +1,9 @@
 # Twitch-OBS-Popouts
 Custom CSS to style the Polls and Prediction pages for OBS
 
-You can find your respective pages here (just replace TwitchUsername): 
-Predictions: https://www.twitch.tv/popout/TwitchUsername/predictions/summary
-Polls: https://www.twitch.tv/popout/TwitchUsername/poll
+You can find your respective pages here (just replace TwitchUsername):
+* Predictions: https://www.twitch.tv/popout/TwitchUsername/predictions/summary
+* Polls: https://www.twitch.tv/popout/TwitchUsername/poll
 
 ## HOW TO USE:
 * Add the link as a Browser Source in OBS
