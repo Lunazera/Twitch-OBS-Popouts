@@ -1,0 +1,78 @@
+/* =============================
+   Twitch Poll Popout OBS Tweaks 
+   ============================= */
+/**
+ * A small CSS file for styling the Poll page for OBS.
+ * You can find your respective page here (just replace TwitchUsername): https://www.twitch.tv/popout/TwitchUsername/poll
+ * This mainly just makes small CSS tweaks to make it look nice in OBS
+ *
+ * HOW TO USE:
+ * Paste this whole file into the Custom CSS box in the browser properties.
+ * Make the Width and Height 400px
+ * You will need a Chroma filter (for green #00ff00) to remove the background
+ *
+ * Written by dragnerz (Kyle)
+ * v1.0
+ */
+
+/* Font Import 
+   =========== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/**
+ * This should be changed based on what font you'd like to use.
+ * For example, you can find import codes for many fonts for use on Google Fonts: https://fonts.google.com/
+ */
+
+/* Properties 
+   ========== */
+/* Change and tweak things here to mess with the font and colours! */     
+:root {
+    --font: 'Roboto', sans-serif; /* Font: change based on whatever font you wish/import */
+    --header-size: 30px;  /* Font size of the header */
+    --option-size: 20px; /* Font size of the different poll options */
+    --winner-colour: #76149e; /* Winning option colour */
+    --option-colour: #2e83d2; /* Default poll option colour */
+    --border-curves: 10px; /* corner roundedness */
+  }
+
+/* Main Styling 
+   ============ */
+/* Font */ 
+#root {
+	font-family: var(--font);
+}
+
+/* Header Size */
+#root > div > div > div > div:first-child > div p:last-child {
+    font-size: var(--header-size) !important;
+}
+
+/* Option Size */ 
+div#root > div > div > div > div:nth-child(2) > div > div > div > label > div > p {
+	font-size: var(--option-size) !important;
+}
+
+/* Winner Colour */
+.choice-progress__fill--winner {
+	background-color: var(--winner-colour) !important;
+}
+
+/* Progress Colour */
+.container__progress--background {
+	background-color: var(--option-colour) !important;
+}
+
+/* Inner Background */
+#root > div > div > div {
+    border-radius: var(--border-curves); /* Rounded Edges*/
+}
+
+/* Remove the bottom section with button to show results */
+#root > div > div > div > div:last-child {
+	display: none !important
+}
+
+/* Background Color - set to gree, you can key this out using Chroma Key Filter */
+#root > div {
+    background-color: #00ff00;
+}

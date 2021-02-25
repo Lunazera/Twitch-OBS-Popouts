@@ -1,0 +1,102 @@
+/* ==========================================
+   Twitch Channel Point Prediction OBS Tweaks 
+   ========================================== */
+/**
+ * A small CSS file for styling the Channel Point Prediction page for OBS.
+ * You can find your respective page here (just replace TwitchUsername): https://www.twitch.tv/popout/TwitchUsername/predictions/summary
+ * This mainly just makes small CSS tweaks to make it look nice in OBS. 
+ * 
+ * HOW TO USE:
+ * Paste this whole file into the Custom CSS box in the browser properties.
+ * Make the Width and Height 400px
+ * You will need a Chroma filter (for green #00ff00) to remove the background
+ *
+ * Written by dragnerz (Kyle)
+ * v1.0
+ */
+
+/* Font Import 
+   =========== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/**
+ * This should be changed based on what font you'd like to use.
+ * For example, you can find import codes for many fonts for use on Google Fonts: https://fonts.google.com/
+ */
+
+/* Properties 
+   ========== */
+/* Change and tweak things here to mess with the font and colours! */ 
+:root {
+    --font: 'Roboto', sans-serif; /* Font: change based on whatever font you wish/import */
+    --header-size: 25px; /* Font size of the header */
+    --subheader-size: 20px; /* Font size of the subheader */
+    --percentage-size: 20px; /* Font size of the #% text */
+    --blue-colour: #2e83d2; /* "Blue" team colour ( Twitch Default Colour: #387aff) */
+    --pink-colour: #76149e; /* "Pink" team colour (Twitch Default Colour: #f5009b) */
+    --border-curves: 10px; /* corner roundedness */
+  }
+
+/* Main Styling 
+   ============ */
+/* Font */ 
+#root {
+	font-family: var(--font);
+}
+
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(1) > h4 {
+	font-size: var(--header-size); 
+}
+
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(1) > p {
+	font-size: var(--subheader-size); 
+}
+
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+    background-color: var(--blue-colour);
+}
+
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+    background-color: var(--pink-colour);
+}
+
+/* Making the font white always */
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div > div > p {
+	color: white;
+	font-size: var(--percentage-size) !important;
+}
+
+/* Making the font white always */
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div > div > div > p {
+	color: white;
+	font-size: var(--percentage-size) !important;
+}
+
+/* Creating similar rounded border/background to Poll*/
+div#root > div > div > div > div > div:nth-child(3) > div > div {
+    background-color: #18181b !important;
+    border-radius: var(--border-curves);
+    margin: 22px !important;
+}
+
+/* Background Color - set to red, you can key this out using Chroma Key Filter */
+#root > div {
+    background-color: #00ff00;
+}
+
+/* Remove list of voters */
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(2) {
+    display: none !important;
+}
+
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(3) {
+    display: none !important;
+}
+
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(4) {
+    display: none !important;
+}
+
+/* Remove Back Button */
+div#root > div > div > div > div > div:nth-child(3) > div > div > div:nth-child(3) {
+    display: none;
+}
