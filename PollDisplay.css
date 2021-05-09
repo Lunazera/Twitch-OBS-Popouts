@@ -17,17 +17,17 @@
 
 /* Font Import 
    =========== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-/**
- * This should be changed based on what font you'd like to use.
- * For example, you can find import codes for many fonts for use on Google Fonts: https://fonts.google.com/
- */
+   @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap'); 
+   /**
+    * This should be changed based on what font you'd like to use.
+    * For example, you can find import codes for many fonts for use on Google Fonts: https://fonts.google.com/
+    */
 
 /* Properties 
    ========== */
 /* Change and tweak things here to mess with the font and colours! */     
 :root {
-    --font: 'Roboto', sans-serif; /* Font: change based on whatever font you wish/import */
+    --font: 'Bubblegum Sans', cursive; /* Font: change based on whatever font you wish/import */
     --header-size: 30px;  /* Font size of the header */
     --option-size: 20px; /* Font size of the different poll options */
     --winner-colour: #76149e; /* Winning option colour */
@@ -47,18 +47,26 @@
     font-size: var(--header-size) !important;
 }
 
-/* Option Size */ 
+/* Option Size & Color */ 
 div#root > div > div > div > div:nth-child(2) > div > div > div > label > div > p {
 	font-size: var(--option-size) !important;
 }
 
+div#root > div > div > div > div:nth-child(2) > div > div > div > label > div {
+	color: #ffffff !important;
+}
+
+/* Selecting individual bars
+div#root > div > div > div > div:nth-child(2) > div > div:nth-child(1)
+*/
+
 /* Winner Colour */
-.choice-progress__fill--winner {
+.container--winner {
 	background-color: var(--winner-colour) !important;
 }
 
 /* Progress Colour */
-.container__progress--background {
+.container__progress {
 	background-color: var(--option-colour) !important;
 }
 
